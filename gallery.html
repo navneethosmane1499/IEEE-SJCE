@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>GALLERY</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Unicat project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="plugins/video-js/video-js.css" rel="stylesheet" type="text/css">
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="styles/blog.css">
+<link rel="stylesheet" type="text/css" href="styles/blog_responsive.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+	.loader-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #242f3f;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .loader {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	border: 4px solid #Fff;
+	animation: loader 2s infinite ease;
+  }
+
+  .loader-inner {
+	vertical-align: top;
+	display: inline-block;
+	width: 100%;
+	background-color: #fff;
+	animation: loader-inner 2s infinite ease-in;
+  }
+  @keyframes loader {
+	0% { transform: rotate(0deg);}
+	25% { transform: rotate(180deg);}
+	50% { transform: rotate(180deg);}
+	75% { transform: rotate(360deg);}
+	100% { transform: rotate(360deg);}
+  }
+  @keyframes loader-inner {
+	0% { height: 0%;}
+	25% { height: 0%;}
+	50% { height: 100%;}
+	75% { height: 100%;}
+	100% { height: 0%;}
+  }
+
+  .top {
+  width: 100%;
+  text-align: center; }
+
+.galleryItem {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  border: solid 0px #fff;
+  padding: 0;
+  display: inline-block;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25); }
+
+.galleryItem img {
+  width: 250px;
+  padding: 10px;
+  height: 250px; }
+
+.caption {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  z-index: 2; }
+
+.caption::before {
+  content: attr(data-title);
+  width: 250px;
+  height: 0; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  font: bold 1.2em 'helvetica neue', helvetica, arial, sans-serif;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.caption::after {
+  content: attr(data-description);
+  width: 250px;
+  height: 0;
+  position: absolute;
+  bottom: -0;
+  left: 0;
+  color: #fff;
+  background-color: #333;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.caption:hover::before {
+  opacity: 1;
+  height: 25px; }
+
+.caption:hover::after {
+  opacity: 1;
+  bottom: 0;
+  height: 65px; }
+
+/* lightbox */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.85);
+}
+
+.lightbox a { 
+  color: #fff;
+  text-decoration: none; 
+}
+
+.lightbox img {
+  max-height: 85%;
+  max-width: 85%;
+}
+
+.lightbox:target {
+  display: table;
+}
+
+.lightbox .image {
+  display: table-cell;
+  vertical-align: middle; }
+
+.lightbox .image img {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25); }
+
+.next, .prev, .close { display: block; position: fixed; }
+
+.close { width: 5000px; height: 5000px; overflow: hidden; top: 0; left: 0; z-index: 5; cursor: default; }
+
+.next, .prev { width: 100px; height: 25px; top: 50%; z-index: 10; opacity: 0.7; font-size: 2em; line-height: 25px; text-shadow: 0px 0px 15px rgba(0, 0, 0, 1); }
+
+.prev { left: 50px; text-align: left; font-weight: 900; font-size: 50px;}
+
+.prev::after { content: '\2039'; }
+	
+.next { right: 50px; text-align: right; font-weight: 900; font-size: 50px; }
+
+.next::before { content: '\203A'; }
+
+</style>
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<!-- Header -->
+
+	<header class="header">
+
+		<!-- Header Content -->
+		<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="logo_container">
+								<a href="#">
+										<div class="logo_text"><img src="images/ieee_logo.png" style="width: 40px; height: 40px;"> IEEE <span>SJCE</span></div>
+								</a>
+							</div>
+							<nav class="main_nav_contaner ml-auto">
+								<ul class="main_nav">
+									<li><a href="index.php">Home</a></li>
+									<li><a href="boards.php">Boards</a></li>
+									<li><a href="societies.php">Societies</a></li>
+									<li><a href="team.php">Team</a></li>
+									<li class="active"><a href="gallery.php">Gallery</a></li>
+									<li><a href="contact.php">Contact</a></li>
+									<li class="dropdown">
+											<button class="dropbtn">Fests <i class="fa fa-caret-down"></i></button>
+											<div class="dropdown-content">
+											  <a href="http://www.ieeesjce.com/cyberia/home.php" target="_blank">CYBERIA</a>
+											  <a href="http://ieeesjce.com/tuxedo/" target="_blank">TUXEDO</a>
+											</div>
+									</li> 
+								</ul>
+
+								<!-- Hamburger -->
+								<div class="hamburger menu_mm">
+									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+								</div>
+							</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="menu_mm "><a href="index.php">Home</a></li>
+				<li class="menu_mm"><a href="boards.php">Boards</a></li>
+				<li class="menu_mm"><a href="societies.php">Societies</a></li>
+				<li class="menu_mm"><a href="team.php">Team</a></li>
+				<li class="menu_mm active"><a href="gallery.php">Gallery</a></li>
+				<li class="menu_mm"><a href="contact.php">Contact</a></li>
+				<li class="menu_mm"><a href="http://www.ieeesjce.com/cyberia/home.php" target="_blank">Cyberia</a></li>
+				<li class="menu_mm"><a href="http://ieeesjce.com/tuxedo/" target="_blank">Tuxedo</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="row mt-100">
+			<div class="col" data-aos="fade-left">
+				<div class="section_title_container text-center">
+					<h2 class="section_title">IMAGE GALLERY</h2><hr>
+				</div>
+			</div>
+	</div>
+		  
+	<ul class="top">
+			<li class="galleryItem">
+			  <a class="caption" href="#1" data-title="TUXEDO '19" data-description="As a part of TUXEDO'19, A technical talk by Mr. Kiran M, who is currently working at Intel, Bangalore.">
+				<img src="images/GALLERY/tuxedo_talk.jpeg" alt="Landscape image">
+			  </a>
+			</li>
+			<li class="galleryItem">
+			  <a class="caption" href="#2" data-title="Computer Networks Workshop" data-description="TUXEDO'19, computer networks workshop was held to introduce students to the internet.">
+				<img src="images/GALLERY/CN_workshop.jpeg" alt="Landscape image">
+			  </a>
+			</li>
+			<li class="galleryItem">
+			  <a class="caption" href="#3" data-title="PRAYAS" data-description="Charity work at S S Manoj Seva Trust. Also, to spread awareness about electric safety.">
+				<img src="images/GALLERY/prayas_img.jpeg" alt="Landscape image">
+			  </a>
+			</li>
+			<li class="galleryItem">
+			  <a class="caption" href="#4" data-title="Soldering And Etching" data-description="Workshop held to teach fundamentals of electronics.">
+				<img src="images/GALLERY/s and e.jpeg" alt="Landscape image">
+			  </a>
+			</li>
+			<li class="galleryItem">
+			  <a class="caption" href="#5" data-title="Orientation Day" data-description="Orientation Day was held to introduce freshers to IEEE and to interact with them.">
+				<img src="images/GALLERY/orientation_img.jpeg" alt="Landscape image">
+			  </a>
+			</li>
+			<li class="galleryItem">
+			  <a  href="#6">
+				<img src="images/GALLERY/g1.jpeg" alt="Landscape image">
+			  </a>
+			</li>
+			<li class="galleryItem">
+					<a  href="#7" >
+					  <img src="images/GALLERY/g2.jpeg" alt="Landscape image">
+					</a>
+			</li>
+			<li class="galleryItem">
+					<a href="#8" >
+					  <img src="images/GALLERY/g3.jpeg" alt="Landscape image">
+					</a>
+			</li>
+			<li class="galleryItem">
+					<a href="#9">
+					  <img src="images/GALLERY/g4.jpeg" alt="Landscape image">
+					</a>
+			</li>
+			<li class="galleryItem">
+					<a href="#10">
+					  <img src="images/GALLERY/g5.jpeg" alt="Landscape image">
+					</a>
+			</li>
+			<li class="galleryItem">
+					<a href="#11">
+					  <img src="images/GALLERY/g6.jpeg" alt="Landscape image">
+					</a>
+			</li>
+			<li class="galleryItem">
+					<a href="#12">
+					  <img src="images/GALLERY/g8.jpg" alt="Landscape image">
+					</a>
+			</li>
+			<li class="galleryItem">
+					<a href="#13">
+					  <img src="images/GALLERY/g9.jpg" alt="Landscape image">
+					</a>
+			</li>
+			<li class="galleryItem">
+					<a href="#14">
+					  <img src="images/GALLERY/g11.jpg" alt="Landscape image">
+					</a>
+			</li>
+
+		  </ul>
+			  
+		  <!-- lightbox -->
+		  
+		  <div class="lightbox" id="1">
+			 <div class="image">
+				 <img src="images/GALLERY/tuxedo_talk.jpeg">
+					<a href="#14" class="prev"></a>
+					<a href="#" class="close"></a>
+					<a href="#2" class="next"></a>
+			 </div>
+		  </div>
+		  <div class="lightbox" id="2">
+			  <div class="image">
+				   <img src="images/GALLERY/CN_workshop.jpeg">
+					   <a href="#1" class="prev"></a>
+					   <a href="#" class="close"></a>
+					   <a href="#3" class="next"></a>
+				  </div>
+			  </div>
+			  <div class="lightbox" id="3">
+				  <div class="image">
+					  <img src="images/GALLERY/prayas_img.jpeg">
+						  <a href="#2" class="prev"></a>
+						  <a href="#" class="close"></a>
+						  <a href="#4" class="next"></a>
+				 </div>
+			 </div>
+			  <div class="lightbox" id="4">
+				  <div class="image">
+					  <img src="images/GALLERY/s and e.jpeg">
+						  <a href="#3" class="prev"></a>
+						  <a href="#" class="close"></a>
+						  <a href="#5" class="next"></a>
+				 </div>
+			 </div>
+			  <div class="lightbox" id="5">
+				  <div class="image">
+					  <img src="images/GALLERY/orientation_img.jpeg">
+						  <a href="#4" class="prev"></a>
+						  <a href="#" class="close"></a>
+						  <a href="#6" class="next"></a>
+				 </div>
+			 </div>
+			  <div class="lightbox" id="6">
+				  <div class="image">
+					  <img src="images/GALLERY/g1.jpeg">
+						  <a href="#5" class="prev"></a>
+						  <a href="#" class="close"></a>
+						  <a href="#7" class="next"></a>
+				 </div>
+			 </div>
+			 <div class="lightbox" id="7">
+					<div class="image">
+						<img src="images/GALLERY/g2.jpeg">
+							<a href="#6" class="prev"></a>
+							<a href="#" class="close"></a>
+							<a href="#8" class="next"></a>
+				   </div>
+			</div>
+			<div class="lightbox" id="8">
+					<div class="image">
+						<img src="images/GALLERY/g3.jpeg">
+							<a href="#7" class="prev"></a>
+							<a href="#" class="close"></a>
+							<a href="#9" class="next"></a>
+				   </div>
+			</div>
+			<div class="lightbox" id="9">
+					<div class="image">
+						<img src="images/GALLERY/g4.jpeg">
+							<a href="#8" class="prev"></a>
+							<a href="#" class="close"></a>
+							<a href="#1" class="next"></a>
+				   </div>
+			</div>
+			<div class="lightbox" id="10">
+					<div class="image">
+						<img src="images/GALLERY/g5.jpeg">
+							<a href="#9" class="prev"></a>
+							<a href="#" class="close"></a>
+							<a href="#11" class="next"></a>
+				   </div>
+			</div>
+			<div class="lightbox" id="11">
+					<div class="image">
+						<img src="images/GALLERY/g6.jpeg">
+							<a href="#10" class="prev"></a>
+							<a href="#" class="close"></a>
+							<a href="#12" class="next"></a>
+				   </div>
+			</div>
+			<div class="lightbox" id="12">
+					<div class="image">
+						<img src="images/GALLERY/g8.jpg">
+							<a href="#11" class="prev"></a>
+							<a href="#" class="close"></a>
+							<a href="#13" class="next"></a>
+				   </div>
+			</div>
+			<div class="lightbox" id="13">
+					<div class="image">
+						<img src="images/GALLERY/g9.jpg">
+							<a href="#12" class="prev"></a>
+							<a href="#" class="close"></a>
+							<a href="#14" class="next"></a>
+				   </div>
+			</div>
+			<div class="lightbox" id="14">
+					<div class="image">
+						<img src="images/GALLERY/g11.jpg">
+							<a href="#13" class="prev"></a>
+							<a href="#" class="close"></a>
+							<a href="#1" class="next"></a>
+				   </div>
+			</div>
+
+			<div class="loader-wrapper">
+					<span class="loader"><span class="loader-inner"></span></span>
+				</div>
+	<!-- Footer -->
+
+	<footer class="footer">
+		
+			<div class="container">
+				<div class="row footer_row">
+					<div class="col">
+						<div class="footer_content">
+							<div class="row">
+	
+								<div class="col-lg-3 footer_col">
+						
+									<!-- Footer About -->
+									<div class="footer_section footer_about">
+										<div class="footer_logo_container">
+											<a href="#">
+												<div class="footer_logo_text">IEEE<span> SJCE</span></div>
+											</a>
+										</div>
+										<div class="footer_social">
+											<ul>
+												<li><a href="https://www.facebook.com/ieeesjce/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+												<li><a href="https://www.instagram.com/ieee_sjce/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+												<li><a href="https://twitter.com/ieeesjce"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+												<li><a href="https://www.youtube.com/user/IEEESJCE"><i class="fa fa-youtube fa-1.5x" aria-hidden="true"></i></a></li>
+											</ul>
+										</div>
+									</div>
+									
+								</div>
+	
+								<div class="col-lg-3 footer_col">
+						
+									<!-- Footer Contact -->
+									<div class="footer_section footer_contact">
+										<div class="footer_title">Contact Us</div>
+										<div class="footer_contact_info">
+											<ul>
+												<li>Email: ieee.sjce@gmail.com</li>
+												<li>Phone: +(91) 7022081958</li>
+												<li>IEEE SJCE Student Branch,<br>
+													Sri Jayachamarajendra College of Engineering, Mysuru - 570 006.</li>
+											</ul>
+										</div>
+									</div>
+									
+								</div>
+	
+								<div class="col-lg-3 footer_col">
+						
+									<!-- Footer links -->
+									<div class="footer_section footer_links">
+										<div class="footer_title">Important Links</div>
+										<div class="footer_links_container">
+											<ul>
+												<li><a href="https://sjce.ac.in/">SJCE</a></li>
+												<li><a href="https://www.ieee.org/">IEEE.org</a></li>
+												<li><a href="https://wie.ieee.org/">IEEE WIE</a></li>
+												<li><a href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE XploreDigital Library</a></li>
+												<li><a href="https://standards.ieee.org/">IEEE Standards</a></li>
+												<li><a href="https://spectrum.ieee.org/">IEEE Spectrum</a></li>
+												<li><a href="https://ieeebangalore.org/">IEEE-Bengaluru section</a></li>
+											</ul>
+										</div>
+									</div>
+									
+								</div>
+	
+								<div class="col-lg-3 footer_col clearfix">
+						
+									<!-- Footer links -->
+									<div class="footer_section footer_mobile">
+										<div class = "pt-30"style="color: #767777">
+											Developed by IEEE-SJCE<br>
+											<a href="boards.php#wdb" style="color: #fff">Web Development Board</a>
+										</div>
+									</div>
+									
+								</div>
+	
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<div class="row copyright_row">
+					<div class="col">
+						<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+							<div class="cr_text">
+								Copyright &copy; 2019 IEEE-SJCE</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/masonry/masonry.js"></script>
+<script src="plugins/video-js/video.min.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/blog.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="magnific-popup/jquery.magnific-popup.js"></script>
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+	AOS.init({
+  duration: 1200,
+  once: true
+})
+  </script>
+<script>
+	$(window).on("load",function(){
+	  $(".loader-wrapper").fadeOut("slow");
+	});
+</script>
+
+<script>
+	$(document).ready(function(){
+$('.image-popup-vertical-fit').magnificPopup({
+	type: 'image',
+  mainClass: 'mfp-with-zoom', 
+  gallery:{
+			enabled:true
+		},
+
+  zoom: {
+    enabled: true, 
+
+    duration: 300, // duration of the effect, in milliseconds
+    easing: 'ease-in-out', // CSS transition easing function
+
+    opener: function(openerElement) {
+
+      return openerElement.is('img') ? openerElement : openerElement.find('img');
+  }
+}
+
+});
+
+});
+</script>
+</body>
+</html>

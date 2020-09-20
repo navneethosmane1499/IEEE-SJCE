@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BOARDS</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Unicat project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/about.css">
+<link rel="stylesheet" type="text/css" href="styles/about_responsive.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+            .wedb
+        {
+            font-size: 50px;
+        }
+
+        .loader-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #242f3f;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .loader {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	border: 4px solid #Fff;
+	animation: loader 2s infinite ease;
+  }
+
+  .loader-inner {
+	vertical-align: top;
+	display: inline-block;
+	width: 100%;
+	background-color: #fff;
+	animation: loader-inner 2s infinite ease-in;
+  }
+  @keyframes loader {
+	0% { transform: rotate(0deg);}
+	25% { transform: rotate(180deg);}
+	50% { transform: rotate(180deg);}
+	75% { transform: rotate(360deg);}
+	100% { transform: rotate(360deg);}
+  }
+  @keyframes loader-inner {
+	0% { height: 0%;}
+	25% { height: 0%;}
+	50% { height: 100%;}
+	75% { height: 100%;}
+	100% { height: 0%;}
+  }
+</style>
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+    
+            <header class="header">
+    
+                    <!-- Header Content -->
+                    <div class="header_container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                                        <div class="logo_container">
+                                            <a href="#">
+													<div class="logo_text"><img src="images/ieee_logo.png" style="width: 40px; height: 40px;"> IEEE <span>SJCE</span></div>
+                                            </a>
+                                        </div>
+                                        <nav class="main_nav_contaner ml-auto">
+                                                <ul class="main_nav">
+                                                        <li><a href="index.php">Home</a></li>
+                                                        <li class="active"><a href="boards.php">Boards</a></li>
+                                                        <li><a href="societies.php">Societies</a></li>
+                                                        <li><a href="team.php">Team</a></li>
+                                                        <li><a href="gallery.php">Gallery</a></li>
+                                                        <li ><a href="contact.php">Contact</a></li>
+                                                        <li class="dropdown">
+                                                                <button class="dropbtn">Fests <i class="fa fa-caret-down"></i></button>
+                                                                <div class="dropdown-content">
+                                                                  <a href="http://www.ieeesjce.com/cyberia/home.php" target="_blank">CYBERIA</a>
+                                                                  <a href="http://ieeesjce.com/tuxedo/" target="_blank">TUXEDO</a>
+                                                                </div>
+                                                        </li> 
+                                                </ul>
+            
+                                            <!-- Hamburger -->
+                                            <div class="hamburger menu_mm">
+                                                <i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+                                            </div>
+                                        </nav>
+            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>		
+                </header>
+            
+                <!-- Menu -->
+            
+                <div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+                    <div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+                    <nav class="menu_nav">
+                        <ul class="menu_mm">
+                            <li class="menu_mm"><a href="index.php">Home</a></li>
+                            <li class="menu_mm active "><a href="boards.php">Boards</a></li>
+                            <li class="menu_mm "><a href="Societies.php">Societies</a></li>
+                            <li class="menu_mm"><a href="team.php">Team</a></li>
+                            <li class="menu_mm"><a href="gallery.php">Gallery</a></li>
+                            <li class="menu_mm"><a href="contact.php">Contact</a></li>
+                            <li class="menu_mm"><a href="http://www.ieeesjce.com/cyberia/home.php" target="_blank">Cyberia</a></li>
+                            <li class="menu_mm"><a href="http://ieeesjce.com/tuxedo/" target="_blank">Tuxedo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+   
+        <!-- Start Sample Area -->
+        <section class="sample-text-area mb-50">
+                <div class="container mt-100" data-aos="fade-right">
+                    <h3 class="text-heading" style="color: #384158;">BOARDS</h3><hr>
+                    <h3 class="text-heading" style="color: #384158;">WEB DEVELOPEMENT BOARD</h3>
+                    <div class="wedb" >
+                          <a href="team.php#WDB" style="color: #384158;"><i class="fa fa-code"></i></a>
+                    </div>
+                    <p style="font-size: 18px; font-weight: 400;">
+                            Web Development board, a new wing of IEEE SJCE is an exclusive committee for designing and maintaining website and web pages pertaining to IEEE SJCE, its events and spread its motto. For us, WDB is a place where students from various disciplines of the campus meet together to put their creativity to create and design web pages and host them on web securely.<br>
+    
+                            It also encourages the students in the campus to learn languages for web hosting like <b>HTML, CSS, JavaScript, html(server-side scripting)</b> by conducting many technical sessions on them throughout the year, which are hosted by our core committee members.<br>
+                            
+                            Over the years, WDB has turned out be an integral part of IEEE SJCE, due to the growing importance of web in recent years and it shaping up as the best source of information. We, at WDB hope to strengthen the knowledge of web designing and hosting among the students to greater extent and work as a team to bring out web pages to create zing and get overwhelming response from the people on our organization and its events.<br>
+                    </p><hr>
+                </div><br><br>
+    
+                <div class="container mt-30" data-aos="fade-left">
+                        <h3 class="text-heading " style="color: #384158;">IEEE-SJCE EDITORIAL BOARD</h3>
+                        <div class="wedb" >
+                               <a href="team.php#ED" style="color: #384158;"><i class="fa fa-edit"></i></a>
+                        </div>
+                        <p style="font-size: 18px;font-weight: 400;">
+                                
+                        At the IEEE EdBoard, we strive to present interesting news and articles, about the latest trends and discoveries in the technology field, while also providing a voice for IEEE-SJCE, its members, and the students.<br>
+    
+                        We publish three editions of the IEEE Interface magazine, every year - the Orientation edition, about IEEE-SJCE's events, workshops, etc; the Tuxedo edition, about the Open Source Software Revolution; and, the Cyberia Edition, which covers a wide array of the latest and greatest news related to technology.<br>
+    
+                      <!--  Additionally, we conduct a unique, popular event during the Cyberia fest, titled Jugaad, where participants are given a set of out-of-the-world topics and asked to justify them in the silliest manner possible. If you're interested in being a part of all this or just want to contribute your articles/poems,
+    
+                        As they say our knowledge is volatile in nature until we apply the concept of our knowledge in real time situation. Hence <b>Robotics 11</b>, one of the biggest events was conducted by the IEEE-SJCE EDS Chapter. The main highlights of the workshop was that the participants got to learn robotics from scratch and then move on to more advanced topics like Bluetooth controlled robots, voice controlled robots, DTMF controlled robots and even Android app controlled robots.<br>
+    
+						Write to us at <b>interface.ieee@gmail.com</b> -->
+						
+						Our latest of<b> INTERFACE</b> magazine released during <b>TUXEDO'19</b>, consisted of genres like articles, features, tutorials, and reviews related to Hardware/Software Open Source Technology.<br> Click the button to download the magazine.
+						<a href="" class="btn btn-info" download="INTERFACE-TUX'19.pdf"><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+    
+                    </p>
+				</div>
+			
+
+                    
+            </section>
+			<!-- End Sample Area -->
+
+			<div class="loader-wrapper">
+					<span class="loader"><span class="loader-inner"></span></span>
+				</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		
+		<div class="container">
+			<div class="row footer_row">
+				<div class="col">
+					<div class="footer_content">
+						<div class="row">
+
+							<div class="col-lg-3 footer_col">
+					
+								<!-- Footer About -->
+								<div class="footer_section footer_about">
+									<div class="footer_logo_container">
+										<a href="#">
+											<div class="footer_logo_text">IEEE<span> SJCE</span></div>
+										</a>
+									</div>
+									<div class="footer_social">
+										<ul>
+											<li><a href="https://www.facebook.com/ieeesjce/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.instagram.com/ieee_sjce/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+											<li><a href="https://twitter.com/ieeesjce"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.youtube.com/user/IEEESJCE"><i class="fa fa-youtube fa-1.5x" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="col-lg-3 footer_col">
+					
+								<!-- Footer Contact -->
+								<div class="footer_section footer_contact">
+									<div class="footer_title">Contact Us</div>
+									<div class="footer_contact_info">
+										<ul>
+											<li>Email: ieee.sjce@gmail.com</li>
+											<li>Phone: +(91) 7022081958</li>
+											<li>IEEE SJCE Student Branch,<br>
+												Sri Jayachamarajendra College of Engineering, Mysuru - 570 006.</li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="col-lg-3 footer_col">
+					
+								<!-- Footer links -->
+								<div class="footer_section footer_links">
+									<div class="footer_title">Important Links</div>
+									<div class="footer_links_container">
+										<ul>
+											<li><a href="https://sjce.ac.in/">SJCE</a></li>
+											<li><a href="https://www.ieee.org/">IEEE.org</a></li>
+											<li><a href="https://wie.ieee.org/">IEEE WIE</a></li>
+											<li><a href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE XploreDigital Library</a></li>
+											<li><a href="https://standards.ieee.org/">IEEE Standards</a></li>
+											<li><a href="https://spectrum.ieee.org/">IEEE Spectrum</a></li>
+											<li><a href="https://ieeebangalore.org/">IEEE-Bengaluru section</a></li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="col-lg-3 footer_col clearfix">
+					
+								<!-- Footer links -->
+								<div class="footer_section footer_mobile">
+									<div class = "pt-30"style="color: #767777">
+										Developed by IEEE-SJCE<br>
+										<a href="boards.php#wdb" style="color: #fff">Web Development Board</a>
+									</div>
+								</div>
+								
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row copyright_row">
+				<div class="col">
+					<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="cr_text">Copyright &copy; 2019 IEEE-SJCE</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="js/about.js"></script>
+<script src="js/scroll_to_top.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init({
+  duration: 1200,
+  once: true
+})
+  </script>
+
+<script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+</body>
+</html>

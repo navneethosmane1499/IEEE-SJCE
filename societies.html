@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SOCIETIES</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Unicat project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/about.css">
+<link rel="stylesheet" type="text/css" href="styles/about_responsive.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+            .wedb
+        {
+            font-size: 50px;
+        }
+
+        .loader-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #242f3f;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .loader {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	border: 4px solid #Fff;
+	animation: loader 2s infinite ease;
+  }
+
+  .loader-inner {
+	vertical-align: top;
+	display: inline-block;
+	width: 100%;
+	background-color: #fff;
+	animation: loader-inner 2s infinite ease-in;
+  }
+  @keyframes loader {
+	0% { transform: rotate(0deg);}
+	25% { transform: rotate(180deg);}
+	50% { transform: rotate(180deg);}
+	75% { transform: rotate(360deg);}
+	100% { transform: rotate(360deg);}
+  }
+  @keyframes loader-inner {
+	0% { height: 0%;}
+	25% { height: 0%;}
+	50% { height: 100%;}
+	75% { height: 100%;}
+	100% { height: 0%;}
+  }
+
+</style>
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+    
+            <!-- Header Content -->
+            <div class="header_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                                <div class="logo_container">
+                                    <a href="#">
+											<div class="logo_text"><img src="images/ieee_logo.png" style="width: 40px; height: 40px;"> IEEE <span>SJCE</span></div>
+									
+                                    </a>
+                                </div>
+                                <nav class="main_nav_contaner ml-auto">
+										<ul class="main_nav">
+												<li><a href="index.php">Home</a></li>
+                                                <li ><a href="boards.php">Boards</a></li>
+                                                <li class="active"><a href="societies.php">Societies</a></li>
+                                                <li><a href="team.php">Team</a></li>
+												<li><a href="gallery.php">Gallery</a></li>
+												<li ><a href="contact.php">Contact</a></li>
+												<li class="dropdown">
+														<button class="dropbtn">Fests <i class="fa fa-caret-down"></i></button>
+														<div class="dropdown-content">
+														  <a href="http://www.ieeesjce.com/cyberia/home.php" target="_blank">CYBERIA</a>
+														  <a href="http://ieeesjce.com/tuxedo/" target="_blank">TUXEDO</a>
+														</div>
+												</li> 
+										</ul>
+    
+                                    <!-- Hamburger -->
+                                    <div class="hamburger menu_mm">
+                                        <i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+                                    </div>
+                                </nav>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>		
+        </header>
+    
+        <!-- Menu -->
+    
+        <div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+            <div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+            <nav class="menu_nav">
+                <ul class="menu_mm">
+                    <li class="menu_mm"><a href="index.php">Home</a></li>
+                    <li class="menu_mm"><a href="boards.php">Boards</a></li>
+                    <li class="menu_mm active"><a href="societies.php">Societies</a></li>
+                    <li class="menu_mm"><a href="team.php">Team</a></li>
+                    <li class="menu_mm"><a href="gallery.php">Gallery</a></li>
+                    <li class="menu_mm"><a href="contact.php">Contact</a></li>
+                    <li class="menu_mm"><a href="http://www.ieeesjce.com/cyberia/home.php" target="_blank">Cyberia</a></li>
+                    <li class="menu_mm"><a href="http://ieeesjce.com/tuxedo/" target="_blank">Tuxedo</a></li>
+                </ul>
+            </nav>
+        </div>
+   
+        <!-- Start Sample Area -->
+        <section class="sample-text-area mb-50">
+                    <div class="container mt-100" data-aos="fade-right">
+                            <h3 class="text-heading" style="color: #384158;">SOCIETIES</h3><hr>
+                            <h3 class="text-heading" style="color: #384158;">IEEE-SJCE STUDENT BRANCH</h3>
+                            <div class="wedb" >
+                                   <a href="team.php#EC" style="color: #384158;"><i class="fa fa-star"></i></a>
+                            </div>
+                            <p style="font-size: 18px;font-weight: 400;">
+                                    IEEE-SJCE Student Branch which started as an elite group 29 years ago, today has sprawled throughout the campus of SJCE, making the students technically more competitive, more professional and enhancing their abilities as an engineer. Since then IEEE-SJCE STUDENT BRANCH, a division under region 10 of IEEE has been known for the immensity with which its members were bestowed. The very success story of it students as professionals into their respective fields after graduations speaketh of its standards.<br>
+            
+                                    IEEE-SJCE now has about 330+ members from six fields of engineering: Biotechnology, Computer Science, Electronics & Communication, Electrical & Electronics, Information Science and instrumentation technology. Apart from these many students from various post graduation departments have also subscribed to be the members.<br>
+                                    
+                                    IEEE-SJCE conducts two annual technical fests - TUXEDO, a linux fest during the odd semesters and CYBERIA, the annual technical fest conducted during the even semesters. CYBERIA was instigated 19 years ago and till now it has been organized for 18 years. The events in the fest are so organized as to give students from all branches of engineering, irrespective of them being members or not and irrespective of their branches to show case their talents and abilities.<br>
+                                    
+                                    In order to make students technically competitive technical tests on C programming microprocessors etc are conducted. Various workshops and crash courses are also organized. An annual leadership workshop adores the calendar of events every year, which helps the students to improve as leaders and inculcates in them, the spirits of true leaders. Apart from this, lots of talks are organized from people representing industry, academia and research as well.<br>
+                                    
+                                    The standards of IEEE-SJCE were proven the best when it was awarded the <b>Best student Branch</b> for the year 2003-2004. Among the competitors for this tag were the top colleges of VTU, Manipal institute of technology and NITK, Suratkal as well.<br>
+                                    
+                                    IEEE-SJCE is also proud of nurturing <b>IEEE-EDS STUDENT CHAPTER</b>. IEEE-SJCE is the only student branch to have gained permission to start this chapter throughout India. IEEE-SJCE also has a Women in Engineering Student Chapter.<br><br>
+            
+                            </p><hr>
+                        </div>
+            
+                        <div class="container mt-30" data-aos="fade-left">
+                                <h3 class="text-heading" style="color: #384158;">ELECTRON DEVICES SOCIETY</h3>
+                                <div class="wedb" >
+                                       <a href="team.php#EDS" style="color: #384158;"> <i class="fa fa-plug"></i></a>
+                                </div>
+                                <p style="font-size: 18px;font-weight: 400;" class="pt-10">
+                                    
+                                    <text style="color: #384158; font-weight: 600;">WHO WE ARE?</text><br>
+                                    IEEE SJCE EDS has been providing students with the basic electronics knowledge since its inception. It has helped students get more familiarized with electronic components, the various techniques of circuit making and the basics of robot building.<br><br>
+            
+                                    <text style="color: #384158;font-weight: 600;">SNAP CIRCUITS</text><br>
+                                    Snap circuit product is a tool for entering the exciting world of electronics. Electronics plays an important and increasing role in everyday lives, and so it is important to have some basic knowledge of it.<br>
+            
+                                    In this workshop the students have hands-on session of basic electrical and electronics circuits. The workshop is conducted for first and second year students exclusively. The students are allowed to explore different circuits with the help of the manuals which come along with the kits under the supervision of volunteers.<br><br>
+            
+                                    <text style="color: #384158;font-weight: 600;">SOLDERING AND ETCHING WORKSHOP</text><br>
+                                    Soldering is a concept used in each and every electronic appliance. It is necessary to know the proper soldering techniques. Keeping this in mind, IEEE SJCE EDS conducts Soldering and Etching workshop in odd semesters, where senior IEEE EDS members teach the 2nd years and 1st years. They make participants etch a simple circuit and solder it.<br><br>
+            
+                                    <text style="color: #384158;font-weight: 600;">ROBOTICS WORKSHOP</text><br>
+                                    As they say our knowledge is volatile in nature until we apply the concept of our knowledge in real time situation. Hence Robotics 8.X, one of the biggest events was conducted by the IEEE-SJCE EDS Chapter.<br>
+            
+                                    The main highlights of the workshop was that the participants got to learn robotics from scratch and then move on to more advanced topics like Bluetooth controlled robots, voice controlled robots, DTMF controlled robots and even Android app controlled robots.<br><br>
+            
+                                    <text style="color: #384158;font-weight: 600;">VACATION PROJECT MANIA</text><br>
+                                    "Whatever we possess becomes of double value when we have the opportunity of sharing it with others" this famous adage of Jean Nicolas embodies the idea of conducting VPM.<br>
+            
+                                    Vacation Project Mania, an initiative of IEEE SJCE EDS is conducted during the vacations. VPM is basically an interactive session in which the seniors and juniors mingle together to share their knowledge, ideas and most important of all, an experience, but the torch bearers of this successful mania are the seniors without a doubt.<br>
+            
+                                    VPM gets huge response from all circuit branches, around 120 students attend the project sessions every day for 4 hours VPM played prominent role in generating practical impulse in minds of young budding engineers.<br><br>
+            
+                
+                                </h6><hr>
+                            </div>
+            
+                            <div class="container mt-30" data-aos="fade-right">
+                                    <h3 class="text-heading" style="color: #384158;">WOMEN IN ENGINEERING</h3>
+                                    <div class="wedb" >
+                                           <a href="team.php#WIE" style="color: #384158;"><i class="fa fa-female"></i></a>
+                                    </div>
+                                    <p style="font-size: 18px;font-weight: 400;">
+                                      
+            
+                                           <b> IEEE Women in Engineering (WIE)</b> is a global network of IEEE members and volunteers dedicated to promoting women engineers and scientists, and inspiring girls around the world to follow their academic interests in a career in engineering and science. It is the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity. Its goal is to facilitate the recruitment and retention of women in technical disciplines globally. IEEE WIE envisions a vibrant community of IEEE women and men collectively using their diverse talents to innovate for the benefit of humanity.<br><br>
+
+                                            The idea of WIE chapter in IEEE SJCE student branch was conceived and implemented only a couple of years ago. Since its inception, the chapter has been responsible for several activities and initiatives. WIE team have made frequent visits to several organizations <b> to reach out to underprivileged children and educate them about their chances in engineering.</b><br><br>
+                                            IEEE-SJCE WIE also organises distinguished lectures by women professionals who help in encouraging young girls to strive hard and motivate in achieving excellence in academics and profession. Apart from this, the WIE chapter of the student branch is also involved in organising technical competition and workshops. The team intenda to continue these activities along with implementation of newer ideas. <br><br>
+                                            
+                                            
+                                            <text style="color: #384158;font-weight: 600;">MAJOR ACTIVITIES OF WIE :</text>   <br><br>
+                                            <text style="color: #384158;font-weight: 600;">▪ PRAYAS</text> <br>
+                                            (Platform for Rendering Aid to Young kids and Aiming to spread Smiles) A reach out programme to provide under privileged children a positive learning environment that will help them unleash their potential. This includes numerous visits to orphanages for providing academic aid to the kids. Additionally, kids are also helped with spoken English. Several organizations like Baapuji Childrens Home, Sri Chayadevi Trust, Divya Deepa Charitable Trust, Vijaya Educational Society, etc. have been part of PRAYAS and have given a chance to carry out the reach out programme. Currently, the team of WIE is carrying out PRAYAS in  Rangarao Memorial School for Disabled, Mysuru.<br><br>
+                                            
+                                            <text style="color: #384158;font-weight: 600;">▪ Tech-Know-Logic </text><br>
+                                            A technical workshop which focuses on teaching concepts of microcontroller and its programming to differently abled students in order to give the practical exposure of the subjects. It is a 2-day workshop held at JSS Polytechnic for the Differently Abled (PDA), Mysuru. IEEE SJCE WIE is practising this workshop since 3 years and aims to continue doing so with more number of participants and newer concepts. <br><br>
+                                            
+                                            <text style="color: #384158;font-weight: 600;">▪ Kalpana Chawla Memorial Lecture</text><br>
+                                            A distinguished lecture by a woman scientist from aerospace engineering domain. The main motto of the event was to mark the demise of Indian born women astronaut, Kalpana Chawla. The initiative to organise this event was taken in the year 2018. The chief guest for the event was Dr. Indra Arumugam, Associate Director ISTRAC, ISRO. Glimpse of missions undertaken by ISRO and challenges in completing those missions was given. WIE team aims to continue organising this event annually. <br><br>
+                                            
+                                            <text style="color: #384158;font-weight: 600;">▪ Build and Run</text><br>
+                                            A dual domain online hackathon wherein the participating teams are told to submit solutions to given problems within the deadline. The teams are given options between Coding and Circuit Simulation. IN order to encourage girls to be part of the hackathon, rule of having minimum one girl participant in the team is compelled.
+                                    </p><hr>
+                                </div>
+            </section>
+			<!-- End Sample Area -->
+			
+			<div class="loader-wrapper">
+					<span class="loader"><span class="loader-inner"></span></span>
+				</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		
+		<div class="container">
+			<div class="row footer_row">
+				<div class="col">
+					<div class="footer_content">
+						<div class="row">
+
+							<div class="col-lg-3 footer_col">
+					
+								<!-- Footer About -->
+								<div class="footer_section footer_about">
+									<div class="footer_logo_container">
+										<a href="#">
+											<div class="footer_logo_text">IEEE<span> SJCE</span></div>
+										</a>
+									</div>
+									<div class="footer_social">
+										<ul>
+											<li><a href="https://www.facebook.com/ieeesjce/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.instagram.com/ieee_sjce/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+											<li><a href="https://twitter.com/ieeesjce"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.youtube.com/user/IEEESJCE"><i class="fa fa-youtube fa-1.5x" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="col-lg-3 footer_col">
+					
+								<!-- Footer Contact -->
+								<div class="footer_section footer_contact">
+									<div class="footer_title">Contact Us</div>
+									<div class="footer_contact_info">
+										<ul>
+											<li>Email: ieee.sjce@gmail.com</li>
+											<li>Phone: +(91) 7022081958</li>
+											<li>IEEE SJCE Student Branch,<br>
+												Sri Jayachamarajendra College of Engineering, Mysuru - 570 006.</li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="col-lg-3 footer_col">
+					
+								<!-- Footer links -->
+								<div class="footer_section footer_links">
+									<div class="footer_title">Important Links</div>
+									<div class="footer_links_container">
+										<ul>
+											<li><a href="https://sjce.ac.in/">SJCE</a></li>
+											<li><a href="https://www.ieee.org/">IEEE.org</a></li>
+											<li><a href="https://wie.ieee.org/">IEEE WIE</a></li>
+											<li><a href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE XploreDigital Library</a></li>
+											<li><a href="https://standards.ieee.org/">IEEE Standards</a></li>
+											<li><a href="https://spectrum.ieee.org/">IEEE Spectrum</a></li>
+											<li><a href="https://ieeebangalore.org/">IEEE-Bengaluru section</a></li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="col-lg-3 footer_col clearfix">
+					
+								<!-- Footer links -->
+								<div class="footer_section footer_mobile">
+									<div class = "pt-30"style="color: #767777">
+										Developed by IEEE-SJCE<br>
+										<a href="boards.php#wdb" style="color: #fff">Web Development Board</a>
+									</div>
+								</div>
+								
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row copyright_row">
+				<div class="col">
+					<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="cr_text">Copyright &copy; 2019 IEEE-SJCE</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="js/about.js"></script>
+<script src="js/scroll_to_top.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init({
+  duration: 1200,
+  once: true
+})
+  </script>
+
+<script>
+	$(window).on("load",function(){
+	  $(".loader-wrapper").fadeOut("slow");
+	});
+</script>
+</body>
+</html>
